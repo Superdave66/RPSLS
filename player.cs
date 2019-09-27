@@ -9,12 +9,13 @@ namespace RPSLS
     abstract class Player
     {
         public int score;
-        public string Name;
-        public string Geasture;
+        public string name;
+        public string geasture;
       
 
-        public abstract void ChooseGeasture();
-   
+        public abstract string ChooseGeasture();
+        public abstract string GetName(); 
+        
 
     }
 }

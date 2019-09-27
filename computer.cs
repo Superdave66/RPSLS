@@ -8,7 +8,12 @@ namespace RPSLS
 {
     class Computer : Player
     {
-        public override void ChooseGeasture()
+        public override string ChooseGeasture()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string GetName()
         {
             throw new NotImplementedException();
         }

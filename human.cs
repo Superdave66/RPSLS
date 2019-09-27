@@ -7,13 +7,27 @@ using System.Threading.Tasks;
 namespace RPSLS
 {
     class Human:Player
-    {
-        public override void ChooseGeasture()
+    {   
+        public override string ChooseGeasture()
         {
 
             Console.WriteLine("Choose your Geasture");
-            Geasture = Console.ReadLine();
+            geasture = Console.ReadLine();
+            return geasture;
         }
-    }
-}
+        public override string GetName()
+        {
+            Console.WriteLine("What is your name?");
+            name = Console.ReadLine();
+            return name;
+        }
+
+        
+        
+            
+     }
+
+ }
+
+
  
