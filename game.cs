@@ -18,12 +18,10 @@ namespace RPSLS
             rules.Add("Scissors beats Paper and Lizard ");
             rules.Add("Lizard beats spock and Paper");
             rules.Add("Spock beats Rock and Scissors ");
-
-
-
             foreach (string rule in rules) ;
             Console.WriteLine(rules);
-
+           
+         
         }
         public int NumberOfPlayers()
         {
@@ -33,7 +31,8 @@ namespace RPSLS
         }
         public void CreatePlayers(int numberofplayers) {
 
-            if (numberofplayers == 1) {
+            if (numberofplayers == 1)
+            {
                 player1 = new Human();
                 player2 = new Computer();
             }
@@ -42,11 +41,18 @@ namespace RPSLS
                 player1 = new Human();
                 player2 = new Human();
             }
-            else
+            else if (numberofplayers == 0)
             {
                 player1 = new Computer();
                 player2 = new Computer();
-            } 
+            }
+            else
+            {
+                Console.WriteLine("we are sorry but you need to buy the DLC to be able to play");
+                RunGame();
+         }
+
+             
          }
         public int GetNumberOfRounds()
         {
@@ -54,16 +60,23 @@ namespace RPSLS
             numberofrounds = int.Parse(Console.ReadLine());
             return numberofrounds;
          
+      
             
         }
+         
+
         public void RunGame()
         {
             AddRules();
             NumberOfPlayers();
             CreatePlayers(numberofplayers);
-            GetNumberOfRounds();  
-           
-        }
+            GetNumberOfRounds();         
+            player1.GetName();
+            player2.GetName();            
+            player1.ChooseGeasture();
+            player2.ChooseGeasture();
+
+        }  
         
      }  
 }
