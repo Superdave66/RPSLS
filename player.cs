@@ -14,8 +14,6 @@ namespace RPSLS
       
 
         public abstract string ChooseGeasture();
-        public abstract string GetName(); 
-        
-
-    }
+        public abstract string GetName();
+     }
 }

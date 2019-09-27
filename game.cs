@@ -11,6 +11,7 @@ namespace RPSLS
         public int numberofplayers;
         public Player player1;
         public Player player2;
+        public int numberofrounds;
         public void AddRules() {
             rules.Add("Rock Beats Scissors and Lizard");
             rules.Add("Paper beats Rock and Spock");
@@ -47,7 +48,24 @@ namespace RPSLS
                 player2 = new Computer();
             } 
          }
-     }
+        public int GetNumberOfRounds()
+        {
+            Console.WriteLine("how many rounds do you want to play");
+            numberofrounds = int.Parse(Console.ReadLine());
+            return numberofrounds;
+         
+            
+        }
+        public void RunGame()
+        {
+            AddRules();
+            NumberOfPlayers();
+            CreatePlayers(numberofplayers);
+            GetNumberOfRounds();  
+           
+        }
+        
+     }  
 }
 
 

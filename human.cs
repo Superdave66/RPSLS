@@ -15,17 +15,14 @@ namespace RPSLS
             geasture = Console.ReadLine();
             return geasture;
         }
-        public override string GetName()
+
+        public override string GetName( )
         {
             Console.WriteLine("What is your name?");
-            name = Console.ReadLine();
-            return name;
+        name = Console.ReadLine();
+         return name;
         }
-
-        
-        
-            
-     }
+    }
 
  }
 

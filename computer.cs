@@ -10,7 +10,7 @@ namespace RPSLS
     {
         public override string ChooseGeasture()
         {
-            throw new NotImplementedException();
+            
         }
 
         public override string GetName()
