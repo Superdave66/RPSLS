@@ -24,7 +24,7 @@ namespace RPSLS
 
     public override string GetName()
         {
-            Console.WriteLine();
+            Console.Write("computer");
             name = Console.ReadLine();
             return name;
         }

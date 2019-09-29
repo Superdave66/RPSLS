@@ -13,7 +13,9 @@ namespace RPSLS
         public Player player1;
         public Player player2;
         public int numberofrounds = 3;
-        
+        public string roundwinner;
+
+
 
         public void AddRules() {
             rules.Add("Rock Beats Scissors and Lizard");
@@ -66,14 +68,14 @@ namespace RPSLS
                 case "Rock":
                     {
                         if (player2.geasture is "Paper") {
-                            Console.Write(player2.name + "wins");
+                            Console.Write(player2.name + "wins Round");
                             Console.ReadLine();
                         }
 
                         else if
                             (player2.geasture is "Lizard")
                         {
-                            Console.WriteLine(player1 + "wins");
+                            Console.WriteLine(player1 + "wins round");
                             Console.ReadLine();
                         }
 
@@ -81,14 +83,14 @@ namespace RPSLS
                         else if
                             (player2.geasture is "Spock")
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins round");
                             Console.ReadLine();
 
                         }
                         else if
                             (player2.geasture is "Scissors")
                         {
-                            Console.WriteLine(player1 + "Wins");
+                            Console.WriteLine(player1 + "Wins round");
                             Console.ReadLine();
                         }
                         else
@@ -101,13 +103,13 @@ namespace RPSLS
                 case "Paper":
                     { if (player2.geasture is "Rock") ;
                         {
-                            Console.WriteLine(player1 + "wins");
+                            Console.WriteLine(player1 + "wins round");
                             Console.ReadLine();
                         }
 
                         if (player2.geasture is "Lizard")
                         {
-                            Console.WriteLine(player1 + "wins");
+                            Console.WriteLine(player1 + "wins round");
                             Console.ReadLine();
                         }
 
@@ -115,14 +117,14 @@ namespace RPSLS
                         else if
                             (player2.geasture is "Spock")
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins round");
                             Console.ReadLine();
 
                         }
                         else if
                             (player2.geasture is "Scissors")
                         {
-                            Console.WriteLine(player1 + "Wins");
+                            Console.WriteLine(player1 + "Wins round");
                             Console.ReadLine();
                         }
                         else
@@ -136,13 +138,13 @@ namespace RPSLS
                     {
                         if (player2.geasture is "Rock") ;
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         }
 
                         if (player2.geasture is "Lizard")
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         }
 
@@ -150,14 +152,14 @@ namespace RPSLS
                         else if
                             (player2.geasture is "Spock")
                         {
-                            Console.WriteLine(player1 + "wins");
+                            Console.WriteLine(player1 + "wins Round");
                             Console.ReadLine();
 
                         }
                         else if
                             (player2.geasture is "Paper")
                         {
-                            Console.WriteLine(player1 + "Wins");
+                            Console.WriteLine(player1 + "Wins Round");
                             Console.ReadLine();
                         }
                         else
@@ -171,13 +173,13 @@ namespace RPSLS
                     {
                         if (player2.geasture is "Rock") ;
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         }
 
                         if (player2.geasture is "Scissors")
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         }
 
@@ -185,13 +187,13 @@ namespace RPSLS
                         else if
                             (player2.geasture is "Spock")
                         {
-                            Console.WriteLine(player1 + "wins");
+                            Console.WriteLine(player1 + "wins Round");
                             Console.ReadLine();
                         }
                         else if
                             (player2.geasture is "Paper")
                         {
-                            Console.WriteLine(player1 + "Wins");
+                            Console.WriteLine(player1 + "Wins Round");
                             Console.ReadLine();
                         }
                         else
@@ -205,13 +207,13 @@ namespace RPSLS
                     {
                         if (player2.geasture is "Rock") ;
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         }
 
                         if (player2.geasture is "Scissors")
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         }
 
@@ -219,7 +221,7 @@ namespace RPSLS
                         else if
                             (player2.geasture is "Lizard")
                         {
-                            Console.WriteLine(player2 + "wins");
+                            Console.WriteLine(player2 + "wins Round");
                             Console.ReadLine();
                         
 
@@ -228,7 +230,7 @@ namespace RPSLS
                         else if
                             (player2.geasture is "Paper")
                         {
-                            Console.WriteLine(player1 + "Wins");
+                            Console.WriteLine(player1 + "Wins Round");
                             Console.ReadLine();
                         }
                     
@@ -241,10 +243,37 @@ namespace RPSLS
             }
 
         }
+        public void GetGameWinner(Player player1, Player player2)
+        {
+            roundwinner = GetRoundWinner();
+            if (roundwinner == player1 + "wins ")
+            {
+                player1.score = player1.score + 1;
+            }
+            else if (roundwinner == player2 + "wins ")
+            {
+                player2.score = player2.score + 1;
+            }
+            else
+            { }
+            while (player1.score < 2 || player2.score < 2);
+            {
+                player1.ChooseGeasture();
+                player2.ChooseGeasture();
+                GetRoundWinner();
+            }if (player1.score = 2)
+            {
+                Console.Write(player1 + "wins game")
+            }
+               
 
+             
+        }
 
-
-
+        private string GetRoundWinner()
+        {
+            throw new NotImplementedException();
+        }
 
         public void RunGame()
         {
@@ -256,7 +285,7 @@ namespace RPSLS
             player2.GetName();            
             player1.ChooseGeasture();
             player2.ChooseGeasture();
-            GetRoundWinner(player1, player2);
+            GetGameWinner(player1, player2);
 
         }  
         
