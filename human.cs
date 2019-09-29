@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Human:Player
-    {   
+    class Human : Player
+    {
+        public Human() { }
         public override string ChooseGeasture()
         {
 
@@ -16,12 +17,13 @@ namespace RPSLS
             return geasture;
         }
 
-        public override string GetName( )
+        public override string GetName()
         {
             Console.WriteLine("What is your name?");
-        name = Console.ReadLine();
-         return name;
+            name = Console.ReadLine();
+            return name;
         }
+        
     }
 
  }
