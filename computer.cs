@@ -8,26 +8,27 @@ namespace RPSLS
 {
     class Computer : Player
     {
-        
-
-
-
-        Random random = new Random();
+       
+            //public new string geasture=    ChooseGeasture();
+            Random random = new Random();
         public override string ChooseGeasture()
         {
-       
-        
-        int index = random.Next(geastures.Count);
-        Console.WriteLine(geastures[index]);
-            return geastures[index];
+
+
+           int index = random.Next(geastures.Count);
+           Console.WriteLine(geastures[index]);
+           return geastures[index];
+         
+            
         }
 
-    public override string GetName()
+        public override string GetName()
         {
             Console.Write("computer");
             name = Console.ReadLine();
             return name;
+
         }
-    
     }
+    
 }

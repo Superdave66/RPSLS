@@ -24,7 +24,7 @@ namespace RPSLS
             {
                 geastures.Add("Rock");
                 geastures.Add("Paper");
-                geastures.Add("scissors");
+                geastures.Add("Scissors");
                 geastures.Add("Lizard");
                 geastures.Add("Spock");
             foreach (string geasture in geastures);

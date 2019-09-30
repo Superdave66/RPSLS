@@ -12,7 +12,7 @@ namespace RPSLS
         public override string ChooseGeasture()
         {
 
-            Console.WriteLine("Choose your Geasture");
+            Console.WriteLine("Choose your Geasture Rock, Paper, Scissors, Lizard, Spock");
             geasture = Console.ReadLine();
             return geasture;
         }
